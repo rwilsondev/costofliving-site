@@ -15,6 +15,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+	<!-- Authgear SDK -->
+	<script src="https://cdn.jsdelivr.net/npm/@authgear/web@latest/dist/authgear.umd.js"></script>
 </head>
 <body>
 <div class="container">
@@ -27,10 +29,15 @@
       <ul>
         <li>ABOUT</li>
         <li>SHOPPING</li>
-        <li>TRAVEL</li>
-        <li>SUBSIDIES</li>
-        <li>OTHER</li>
-        <li>CONTACT</li>
+        <li><a href="travel.html">TRAVEL</a></li>
+        <li><a href="subsidies.html">SUBSIDIES</a></li>
+        <li><a href="other.html">OTHER</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li id="authContainer" style="float: right; margin-right: 20px;">
+          <button id="loginBtn" onclick="handleLogin()" style="padding: 8px 16px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; display: none;">Login</button>
+          <button id="logoutBtn" onclick="handleLogout()" style="padding: 8px 16px; background-color: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer; display: none;">Logout</button>
+          <span id="userInfo" style="display: none; margin-right: 10px; color: #333;"></span>
+        </li>
       </ul>
     </nav>
   </header>
@@ -39,7 +46,7 @@
     <article class="left_article">
       <h3>Shopping</h3>
 <p>Welcome to the cost of living homepage. This is a project designed to help people find info to help alleviate issues with the cost of living crisis on one site.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </article>
     <aside class="right_article"><img src="images/placeholder.jpg" alt="" width="400" height="200" class="placeholder"/> </aside>
   </section>
@@ -77,5 +84,6 @@
     <div class="copyright">&copy;2026 - <strong>Riley Wilson</strong></div>
   </footer>
 </div>
+<script src="js/auth.js"></script>
 </body>
 </html>

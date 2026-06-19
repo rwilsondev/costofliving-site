@@ -9,6 +9,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+	<!-- Authgear SDK -->
+	<script src="https://cdn.jsdelivr.net/npm/@authgear/web@latest/dist/authgear.umd.js"></script>
 </head>
 <body>
 <div class="container">
@@ -25,6 +27,11 @@
         <li><a href="subsidies.html">SUBSIDIES</a></li>
         <li><a href="other.html">OTHER</a></li>
         <li><a href="contact.html">CONTACT</a></li>
+        <li id="authContainer" style="float: right; margin-right: 20px;">
+          <button id="loginBtn" onclick="handleLogin()" style="padding: 8px 16px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; display: none;">Login</button>
+          <button id="logoutBtn" onclick="handleLogout()" style="padding: 8px 16px; background-color: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer; display: none;">Logout</button>
+          <span id="userInfo" style="display: none; margin-right: 10px; color: #333;"></span>
+        </li>
       </ul>
     </nav>
   </header>
@@ -71,5 +78,6 @@
     <div class="copyright">&copy;2026 - <strong>Riley Wilson</strong></div>
   </footer>
 </div>
+<script src="js/auth.js"></script>
 </body>
 </html>
